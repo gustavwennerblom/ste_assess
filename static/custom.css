@@ -1,0 +1,8 @@
+.main_option {
+    display: inline;
+    }
+
+form > ul > li {
+    display:inline;
+    margin-right:10px;
+    }

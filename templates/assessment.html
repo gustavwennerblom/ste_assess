@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md">
+                <h1>Steps to Export - Är du redo?</h1>
+            </div>
+            <div class="col-md"></div>
+        </div>
+        <div class="row">
+            <div class="col-md"></div>
+            <div class="col-md">
+                <form method="post">
+                    {{form.hidden_tag()}}
+                    {{form.q1.label}} {{form.q1}}
+                    {{form.q2.label}} {{form.q2}}
+                    {{form.q3.label}} {{form.q3}}
+                    {{form.submit}}
+                </form>
+            </div>
+            <div class="col-md"></div>
+        </div>
+    </div>
+{% endblock %}
