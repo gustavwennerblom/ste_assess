@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block main %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <h1>Steps to Export - Att välja kursmoduler</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-9">
+                {% if feedback|length < 1 %}
+                    <p>Du verkar ha full koll på det mesta. Du kanske borde boka ett individuellt möte med en Exportrådgivare istället?</p>
+                {% else %}
+                    <p>Tack för dina svar. Baserat på dem rekommenderar vi följande moduler</p>
+                    <ul class="list-group">
+                        {% for item in feedback %}
+                        <li class="list-group-item">{{item[0]}} - <a href="{{item[1]}}" target="_blank">{{item[1]}}</a></li>
+                        {% endfor %}
+                    </ul>
+                    <p>Vi önskar dig lycka till!</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

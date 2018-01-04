@@ -16,8 +16,8 @@ def get_questions():
 class MainQuestionnaire(FlaskForm):
     questions, options = get_questions()
     choices = [('Ja','Ja'), ('Delvis','Delvis'), ('Nej','Nej')]
-    q1 = RadioField(label=questions.get('1'), choices=choices)
-    q2 = RadioField(label=questions.get('2'), choices=choices)
-    q3 = RadioField(label=questions.get('3'), choices=choices)
-    submit = SubmitField()
+    q1 = RadioField(label=questions.get('q1'), choices=choices)
+    q2 = RadioField(label=questions.get('q2'), choices=choices)
+    q3 = RadioField(label=questions.get('q3'), choices=choices)
+    submit = SubmitField(label="Skicka svar")
 
