@@ -5,12 +5,12 @@ import csv
 app = Flask(__name__)
 app.secret_key='verysecrethere'
 
-# @app.route('/')
-# def index():
-#     return render_template('assessment.')
-#     #return redirect(url_for('assessment'))
+@app.route('/')
+def index():
+    return render_template('index.html')
+    #return redirect(url_for('assessment'))
 
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/assessment', methods=['GET', 'POST'])
 def assessment():
     form = MainQuestionnaire()
     if form.validate_on_submit():
