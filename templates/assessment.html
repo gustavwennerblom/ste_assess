@@ -15,9 +15,9 @@
             <div class="col-md-9">
                 <form method="post">
                     {{form.hidden_tag()}}
-                    {{form.q1.label}} {{form.q1}}
-                    {{form.q2.label}} {{form.q2}}
-                    {{form.q3.label}} {{form.q3}}
+                    {% for field in form if field.type == 'RadioField' %}
+                        {{field.label}} {{field}}
+                    {% endfor %}
                     {{form.submit(class_="btn btn-primary")}}
                 </form>
            </div>
