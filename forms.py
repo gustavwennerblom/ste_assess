@@ -6,7 +6,7 @@ from collections import OrderedDict
 def get_questions():
     questions = {}
     options = {}
-    with open('questions.csv', 'r') as f:
+    with open('questions.csv', 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for line in reader:
             questions[line['Number']] = line['QuestionText']

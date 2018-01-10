@@ -33,7 +33,7 @@ def recommend_modules(answers):
 
     # Create a map of which question targets which module
     question_module_map = {}
-    with open('questions.csv') as f:
+    with open('questions.csv', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for line in reader:
             question_module_map[line.get('Number')] = line['Module']
@@ -48,7 +48,7 @@ def recommend_modules(answers):
 
 def generate_feedback(recommended_modules):
     feedback=[]
-    with open('course_modules.csv') as f:
+    with open('course_modules.csv', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for module_info in reader:
             if module_info.get('module_no') in recommended_modules:
