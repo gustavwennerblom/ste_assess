@@ -7,8 +7,8 @@ app.secret_key='verysecrethere'
 
 @app.route('/')
 def index():
-    return render_template('index.html')
-    #return redirect(url_for('assessment'))
+    # return render_template('index.html')
+    return redirect(url_for('assessment'))
 
 @app.route('/assessment', methods=['GET', 'POST'])
 def assessment():
