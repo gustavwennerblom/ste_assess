@@ -3,7 +3,7 @@ from forms import MainQuestionnaire
 import csv
 
 app = Flask(__name__)
-app.secret_key='verysecrethere'
+app.secret_key="\n\xd4\x0c\xec%\x12\xa1\xb95b\x89\xdaF'Ay\x1f\xc8"
 
 @app.route('/')
 def index():

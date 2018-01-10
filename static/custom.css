@@ -1,3 +1,14 @@
+body {
+    padding:20px 0 40px 0;
+    background: grey;
+    }
+
+.container {
+    background:white;
+    border-radius: 5px;
+    padding: 40px;
+    }
+
 .main_option {
     display: inline;
     }
@@ -6,3 +17,14 @@ form > ul > li {
     display:inline;
     margin-right:10px;
     }
+
+#main_logo {
+    max-height:80px;
+    margin:20px;
+    }
+
+#steps_logo {
+    max-height:80px;
+    margin:20px;
+    }
+
