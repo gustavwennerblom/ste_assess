@@ -13,6 +13,10 @@ body {
     display: inline;
     }
 
+form > ul {
+    margin-bottom: 2rem;
+    }
+
 form > ul > li {
     display:inline;
     margin-right:10px;
