@@ -2,23 +2,27 @@
 {% block main %}
     <div class="container">
         <div class="row">
-            <div class="col-md">
-                <img src="{{url_for('static', filename='BusSwe_LogoDesc-C_RGB.jpg')}}" class="img-fluid float-left" id="main_logo">
-                <img src="{{url_for('static', filename='steps-logga.jpg')}}" class="img-fluid float-right" id="steps_logo">
+            <div class="col s6">
+                <img src="{{url_for('static', filename='BusSwe_LogoDesc-C_RGB.jpg')}}" class="left" id="main_logo">
+            </div>
+            <div class="col s6">
+                <img src="{{url_for('static', filename='steps-logga.jpg')}}" class="right" id="steps_logo">
             </div>
         </div>
         <div class="row">
-            <div class="col-md">
-                <h1>Steps to Export - Att välja kursmoduler</h1>
-                <div class="alert alert-info">
-                    Kort instruktionstext här att författa senare men jag har formulerat detta onödigt
+            <div class="col">
+                <h2>Steps to Export - Välja kursmoduler</h2>
+                <div class="card teal darken-1">
+                    <div class="card-content white-text">
+                    <p>Kort instruktionstext här att författa senare men jag har formulerat detta onödigt
                     långt för att se hur boxen beter sig. Så lägger till lite Lorem ipsum här då jag inte
-                    kommer på något vettigare att skriva.
+                    kommer på något vettigare att skriva.</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md">
+            <div class="col">
                 <form method="post">
                     {{form.hidden_tag()}}
                     {% for field in form if field.type == 'RadioField' %}

@@ -1,6 +1,6 @@
 body {
     padding:20px 0 40px 0;
-    background: grey;
+    // background: grey;
     }
 
 .container {
@@ -9,8 +9,8 @@ body {
     padding: 40px;
     }
 
-.main_option {
-    display: inline;
+label {
+    color: #333;
     }
 
 form > ul {
@@ -18,7 +18,7 @@ form > ul {
     }
 
 form > ul > li {
-    display:inline;
+    display:inline-block;
     margin-right:10px;
     }
 
