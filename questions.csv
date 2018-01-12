@@ -1,26 +1,26 @@
 Number,QuestionText,Module
-q1,Har ditt företag en dokumenterad exportplan?,0
-q2,Är din exportplan förankrad i organisationen?,0
-q3,Har din organisation tydliga motiv till varför ni exporterar/ska exportera?,1
-q4,Har ni satt tydliga mål för er export utgående från era förutsättningar?,1
-q5,Har ni på ett strukturerat/databaserat sätt valt ut vilka länder ni vill exportera till?,2
-q6,Har ni analyserat branschfaktorer och omvärldsfaktorer i de länder ni planerar er export till?,2
-q7,"Har ert företag en hållbarhetspolicy som innehåller mänskliga rättigheter, antikorruption, miljöskydd, arbetsvillkor?",3
-q8,Har ni rutiner för hur ni föjer upp och utvecklar hållbarheten i ert företag?,3
-q9,Har ni en tydlig strategi för hur ni positionerar ert erbjudande på marknaden?,4
-q10,Har ni analyserat hur ert erbjudande skiljer sig från konkurrenternas?,4
-q11,"Har ni gjort en analys av erbjudandets egenskaper, fördelar och nyttor för de olika aktörerna i ert försäljningsled?",5
-q12,Har ni identifierat och dokumenterat ert exporterbjudandes unika egenskaper?,5
-q13,Har ni en tydlig och dokumenterad prissättningsstrategi för er export?,6
-q14,Har ni kartlagt era konkurrenter och deras erbjudanden på hemmamarknaden och exportmarknaderna?,7
-q15,Har ni utarbetat en strategi över vilka distributionskanaler ni vill använda på de olika marknaderna?,8
-q16,Har ert företag en plan för hur ni hanterar E-handel?,8
-q17,Har företaget en strategi för att hitta samarbetspartners på exportmarknaderna?,9
-q18,Finns det en plan för att maximera samarbetspartners försäljning från ert erbjudande?,9
-q19,Har ni alla avtal nödvändiga för exporten på plats?,10
-q20,Har ni förberett diskussionen med er jurist så att er affärsmodell styr avtalets innehåll?,10
-q21,Har ni en marknadsföringsplan för exportmarknaderna?,11
-q22,Har ni gjort en exportkalkyl så att ni vet hur stor satsningen blir?,12
-q23,Vet ni hur ni skall finansiera exportsatsningen?,12
-q24,Har ni en exportoffert med finansieringslösning?,13
-q25,"Har ni rutiner för att hantera tullar, produktanpassningar och leveransvillkor?",13
+q1,"1. Har ditt företag en dokumenterad exportplan?",0
+q2,"2. Är din exportplan förankrad i organisationen?",0
+q3,"3. Har din organisation tydliga motiv till varför ni exporterar/ska exportera?",1
+q4,"4. Har ni satt tydliga mål för er export utgående från era förutsättningar?",1
+q5,"5. Har ni på ett strukturerat/databaserat sätt valt ut vilka länder ni vill exportera till?",2
+q6,"6. Har ni analyserat branschfaktorer och omvärldsfaktorer i de länder ni planerar er export till?",2
+q7,"7. Har ert företag en hållbarhetspolicy som innehåller mänskliga rättigheter, antikorruption, miljöskydd, arbetsvillkor?",3
+q8,"8. Har ni rutiner för hur ni föjer upp och utvecklar hållbarheten i ert företag?",3
+q9,"9. Har ni en tydlig strategi för hur ni positionerar ert erbjudande på marknaden?",4
+q10,"10. Har ni analyserat hur ert erbjudande skiljer sig från konkurrenternas?",4
+q11,"11. Har ni gjort en analys av erbjudandets egenskaper, fördelar och nyttor för de olika aktörerna i ert försäljningsled?",5
+q12,"12. Har ni identifierat och dokumenterat ert exporterbjudandes unika egenskaper?",5
+q13,"13. Har ni en tydlig och dokumenterad prissättningsstrategi för er export?",6
+q14,"14. Har ni kartlagt era konkurrenter och deras erbjudanden på hemmamarknaden och exportmarknaderna?",7
+q15,"15. Har ni utarbetat en strategi över vilka distributionskanaler ni vill använda på de olika marknaderna?",8
+q16,"16. Har ert företag en plan för hur ni hanterar E-handel?",8
+q17,"17. Har företaget en strategi för att hitta samarbetspartners på exportmarknaderna?",9
+q18,"18. Finns det en plan för att maximera samarbetspartners försäljning från ert erbjudande?",9
+q19,"19. Har ni alla avtal nödvändiga för exporten på plats?",10
+q20,"20. Har ni förberett diskussionen med er jurist så att er affärsmodell styr avtalets innehåll?",10
+q21,"21. Har ni en marknadsföringsplan för exportmarknaderna?",11
+q22,"22. Har ni gjort en exportkalkyl så att ni vet hur stor satsningen blir?",12
+q23,"23. Vet ni hur ni skall finansiera exportsatsningen?",12
+q24,"24. Har ni en exportoffert med finansieringslösning?",13
+q25,"25. Har ni rutiner för att hantera tullar, produktanpassningar och leveransvillkor?",13
