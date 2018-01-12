@@ -14,7 +14,7 @@
                 <h2>Steps to Export - Välja kursmoduler</h2>
                 <div class="card teal darken-1">
                     <div class="card-content white-text">
-                    <p>Kort instruktionstext här att författa senare men jag har formulerat detta onödigt
+                    <p class="flow-text">Kort instruktionstext här att författa senare men jag har formulerat detta onödigt
                     långt för att se hur boxen beter sig. Så lägger till lite Lorem ipsum här då jag inte
                     kommer på något vettigare att skriva.</p>
                     </div>
@@ -26,9 +26,9 @@
                 <form method="post">
                     {{form.hidden_tag()}}
                     {% for field in form if field.type == 'RadioField' %}
-                        {{field.label}} {{field}}
+                        {{field.label(class_="flow-text")}} {{field(class_="flow-text")}}
                     {% endfor %}
-                    {{form.submit(class_="btn btn-primary")}}
+                    {{form.submit(class_="btn-large waves-effect waves-light flow-text")}}
                 </form>
            </div>
         </div>

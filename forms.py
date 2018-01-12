@@ -1,7 +1,15 @@
 from flask_wtf import FlaskForm
 from wtforms import RadioField, SubmitField
+from wtforms.widgets import ListWidget
 import csv
 from collections import OrderedDict
+
+class MaterializeListWidget(ListWidget):
+    def __init__(self):
+        super(MaterializeListWidget, self).__init__()
+
+    def __call__(self, field, **kwargs):
+        return super(MaterializeListWidget, self).__call__(field, **kwargs)
 
 def get_questions():
     questions = {}
@@ -42,4 +50,3 @@ class MainQuestionnaire(FlaskForm):
     q24 = RadioField(label=questions.get('q24'), choices=choices)
     q25 = RadioField(label=questions.get('q25'), choices=choices)
     submit = SubmitField(label="Skicka svar")
-
