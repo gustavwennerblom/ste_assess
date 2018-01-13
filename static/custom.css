@@ -32,3 +32,10 @@ form > ul > li {
     margin:20px;
     }
 
+.map_container {
+    position: relative;
+    }
+
+.map_icon {
+    position: absolute;
+}
