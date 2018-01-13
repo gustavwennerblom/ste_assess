@@ -6,15 +6,21 @@ body {
 .container {
     background:white;
     border-radius: 5px;
-    padding: 40px;
+    padding: 20px;
     }
 
 label {
     color: #333;
+    font-size: 1.4rem !important;
+    }
+
+.intro-card {
+    font-size: 1.5rem;
     }
 
 form > ul {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    margin-left: 1.5rem;
     }
 
 form > ul > li {
@@ -38,4 +44,14 @@ form > ul > li {
 
 .map_icon {
     position: absolute;
+}
+
+.flow-text {
+    font-size: 1.5rem;
+    }
+
+@media (max-width:376px){
+    form > ul > li {
+        display:block;
+        }
 }
