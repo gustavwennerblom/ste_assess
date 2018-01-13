@@ -29,14 +29,20 @@
                 </div>
                     <ul class="collection">
                         {% for item in feedback %}
-                        <li class="collection-item">{{item[0]}} - <a href="{{item[1]}}" target="_blank">{{item[1]}}</a></li>
+                            <li class="collection-item">{{item[0]}} - <a href="{{item[1]}}" target="_blank">{{item[1]}}</a></li>
                         {% endfor %}
                     </ul>
                 {% endif %}
             </div>
         <div class="row">
-            <div class="col">
-                <img src="{{url_for('static', filename='ste_nomenu.png')}}" id="ste_map" class="responsive-img">
+            <div class="col map_container">
+                <img src="{{url_for('static', filename='ste_nomenu_2.png')}}" id="ste_map" class="responsive-img">
+                {# The 3rd and 4th element in the feedback lines are the relative coordinates of the "station" #}
+                {% for item in feedback %}
+                    <a href="{{item[1]}}" target="_blank" class="btn-floating teal pulse map_icon" style="left: {{item[2]}}%; top: {{item[3]}}%">
+                        <i class="material-icons">play_arrow</i>
+                    </a>
+                {% endfor %}
             </div>
         </div>
         </div>

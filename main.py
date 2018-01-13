@@ -52,7 +52,10 @@ def generate_feedback(recommended_modules):
         reader = csv.DictReader(f)
         for module_info in reader:
             if module_info.get('module_no') in recommended_modules:
-                feedback.append((module_info.get('title'), module_info.get('url')))
+                feedback.append((module_info.get('title'),
+                                 module_info.get('url'),
+                                 module_info.get('x-rel'),
+                                 module_info.get('y-rel')))
 
     return feedback
 
