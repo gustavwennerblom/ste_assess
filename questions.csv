@@ -1,6 +1,6 @@
 Number,QuestionText,Module
-q1,"1. Har ditt företag en dokumenterad exportplan?",0
-q2,"2. Är din exportplan förankrad i organisationen?",0
+q1,"1. Har ditt företag en dokumenterad exportplan?",1
+q2,"2. Är din exportplan förankrad i organisationen?",1
 q3,"3. Har din organisation tydliga motiv till varför ni exporterar/ska exportera?",1
 q4,"4. Har ni satt tydliga mål för er export utgående från era förutsättningar?",1
 q5,"5. Har ni på ett strukturerat/databaserat sätt valt ut vilka länder ni vill exportera till?",2
