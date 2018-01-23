@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block main %}
-    <div class="container">
+    <div class="container" id="top">
         <div class="row">
             <div class="col s6">
-                <img src="{{url_for('static', filename='BusSwe_LogoDesc-C_RGB.jpg')}}" class="left" id="main_logo">
+                <!-- Business Sweden logo disabled on request form Niklas -->
+                <!--<img src="{{url_for('static', filename='BusSwe_LogoDesc-C_RGB.jpg')}}" class="left" id="main_logo">-->
             </div>
             <div class="col s6">
                 <img src="{{url_for('static', filename='steps-logga.jpg')}}" class="right" id="steps_logo">
@@ -12,7 +13,7 @@
         <div class="row">
             <div class="col">
                 <h2>Steps to Export - Välja kursmoduler</h2>
-                <div class="card teal darken-1">
+                <div class="card bus-yellow-dark">
                     <div class="card-content white-text">
                     <p class="flow-text">Kort instruktionstext här att författa senare men jag har formulerat detta onödigt
                     långt för att se hur boxen beter sig. Så lägger till lite Lorem ipsum här då jag inte
@@ -23,13 +24,30 @@
         </div>
         <div class="row">
             <div class="col">
+            {# Render form errors if any #}
+                {% if form.errors %}
+                    <div class="card-panel red accent-1">
+                        <span class="error error-title white-text">Oops...</span>
+                        <ul>
+                            {% for field_name, field_errors in form.errors|dictsort if field_errors %}
+                                {% for error in field_errors %}
+                            <li class="white-text">{{form[field_name].label(class_="white-text")}}: <i class="error">{{error}}</i></li>
+                                {% endfor %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+
                 <form method="post">
                     {{form.hidden_tag()}}
                     {% for field in form if field.type == 'RadioField' %}
                         {{field.label(class_="flow-text")}} {{field(class_="flow-text")}}
                     {% endfor %}
-                    {{form.submit(class_="btn-large waves-effect waves-light flow-text")}}
+                    {{form.submit(class_="btn-large waves-effect waves-light flow-text bus-yellow-dark")}}
                 </form>
+                {% if form.errors %}
+                <p class="red-text">Vi har problem med ditt formulär.. <a href="#top">Scrolla upp.</a></p>
+                {% endif %}
            </div>
         </div>
     </div>

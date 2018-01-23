@@ -3,7 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="col s6">
-                <img src="{{url_for('static', filename='BusSwe_LogoDesc-C_RGB.jpg')}}" class="left" id="main_logo">
+                <!-- Business Sweden logo disabled on request from Niklas -->
+                <!-- <img src="{{url_for('static', filename='BusSwe_LogoDesc-C_RGB.jpg')}}" class="left" id="main_logo"> -->
             </div>
             <div class="col s6">
                 <img src="{{url_for('static', filename='steps-logga.jpg')}}" class="right" id="steps_logo">
@@ -29,7 +30,7 @@
                 </div>
                     <ul class="collection">
                         {% for item in feedback %}
-                            <li class="collection-item">{{item[0]}} - <a href="{{item[1]}}" target="_blank">{{item[1]}}</a></li>
+                            <li class="collection-item flow-text">{{item[0]}} - <a href="{{item[1]}}" target="_blank">{{item[1]}}</a></li>
                         {% endfor %}
                     </ul>
                 {% endif %}

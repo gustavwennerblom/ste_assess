@@ -277,8 +277,6 @@ class TestForms(unittest.TestCase):
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('exportvillkor', str(response.data.decode('utf-8')))
 
-
-
     def test_recommend_module_2(self):
         """" Assert module 2 is recommended if bad answer on question 5 or 6"""
         # Build base set of "yes" answers
@@ -339,7 +337,14 @@ class TestForms(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn('Formulera säljargument', str(response.data.decode('utf-8')))
 
+    def test_error(self):
+        """Assert error message is shown if one question is left unanswered"""
+        base_data = self.generate_base_data()
 
+        base_data['q5'] = None
+
+        response = self.client.post('/assessment', data=base_data)
+        self.assertIn('Oops', str(response.data.decode('utf-8')))
 
 if __name__ == '__main__':
     unittest.main()
