@@ -17,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col s12">
-                <div class="card teal darken-1">
+                <div class="card bus-yellow-dark">
                     <div class="card-content white-text">
                     {% if feedback|length < 1 %}
                         <span class="card-title">Exportmästare!</span>
@@ -40,7 +40,7 @@
                 <img src="{{url_for('static', filename='ste_nomenu_2.png')}}" id="ste_map" class="responsive-img">
                 {# The 3rd and 4th element in the feedback lines are the relative coordinates of the "station" #}
                 {% for item in feedback %}
-                    <a href="{{item[1]}}" target="_blank" class="btn-floating teal pulse map_icon" style="left: {{item[2]}}%; top: {{item[3]}}%">
+                    <a href="{{item[1]}}" target="_blank" class="btn-floating bus-yellow-dark pulse map_icon" style="left: {{item[2]}}%; top: {{item[3]}}%">
                         <i class="material-icons">play_arrow</i>
                     </a>
                 {% endfor %}
