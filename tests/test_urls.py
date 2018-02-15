@@ -25,6 +25,15 @@ class TestUrls(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn('Kort instruktionstext här', str(response.data.decode('utf-8')))
 
+    def test_error_500(self):
+        """
+        NOT WORKING - CANNOT REPLICATE FAILURE DUE TO CUSTOM ERROR HANDLING
+        Assert Internal Server Error (500) triggers custom page        
+        """
+        pass
+        # response = self.client.post('/assessment', foo="bar")
+        # self.assertEqual(response.status_code, 200)
+        # self.assertIn('Whoops', str(response.data.decode('utf-8')))
 
 class TestForms(unittest.TestCase):
     def setUp(self):
