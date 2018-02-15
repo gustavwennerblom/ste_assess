@@ -12,6 +12,11 @@ def index():
     # return render_template('index.html')
     return redirect(url_for('assessment'))
 
+
+@app.errorhandler(500)
+def error_500(error):
+    return render_template('500.html')
+
 @app.route('/assessment', methods=['GET', 'POST'])
 def assessment():
     form = MainQuestionnaire()
@@ -26,6 +31,7 @@ def assessment():
         return render_template('feedback.html', feedback=feedback)
 
     return render_template('assessment.html', form=form)
+
 
 def recommend_modules(answers):
     """
@@ -47,6 +53,7 @@ def recommend_modules(answers):
             recommended_modules.append(question_module_map[question_number])
 
     return recommended_modules
+
 
 def generate_feedback(recommended_modules):
     feedback=[]
