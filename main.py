@@ -1,9 +1,11 @@
 from flask import Flask, render_template, url_for, redirect
 from forms import MainQuestionnaire
 import csv
+from keygen import get_secret_key
 
 app = Flask(__name__)
-app.secret_key="\n\xd4\x0c\xec%\x12\xa1\xb95b\x89\xdaF'Ay\x1f\xc8"
+app.secret_key = get_secret_key(12)
+
 
 @app.route('/')
 def index():
@@ -61,4 +63,4 @@ def generate_feedback(recommended_modules):
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=5000)
+    app.run(debug=False, port=5000)
