@@ -5,6 +5,7 @@ from config import UnitTestConfig
 class TestUrls(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
+        app.config.from_object(UnitTestConfig)
 
     def tearDown(self):
         pass

@@ -2,10 +2,13 @@ from flask import Flask, render_template, url_for, redirect
 from forms import MainQuestionnaire
 import csv
 from keygen import get_secret_key
+from flask import request
+from config import DevConfig, TestConfig, ProdConfig
 
 app = Flask(__name__)
 app.secret_key = get_secret_key(12)
-
+app.config.from_object(ProdConfig)
+x=1
 
 @app.route('/')
 def index():
@@ -16,6 +19,7 @@ def index():
 @app.errorhandler(500)
 def error_500(error):
     return render_template('500.html')
+
 
 @app.route('/assessment', methods=['GET', 'POST'])
 def assessment():
@@ -57,7 +61,7 @@ def recommend_modules(answers):
 
 def generate_feedback(recommended_modules):
     feedback=[]
-    with open('course_modules.csv', encoding='utf-8') as f:
+    with open(app.config.get('COURSE_MODULES_FILENAME'), encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for module_info in reader:
             if module_info.get('module_no') in recommended_modules:

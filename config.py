@@ -2,7 +2,15 @@ class BaseConfig:
     pass
 
 class DevConfig(BaseConfig):
-    pass
+    COURSE_MODULES_FILENAME = 'course_modules.csv'
+
+class TestConfig(BaseConfig):
+    COURSE_MODULES_FILENAME = 'course_modules_pilot.csv'
+
+class ProdConfig(BaseConfig):
+    COURSE_MODULES_FILENAME = 'course_modules.csv'
+    TEST_CONFIG_PARAMETER = "Delete me"
 
 class UnitTestConfig(BaseConfig):
+    COURSE_MODULES_FILENAME = 'course_modules_pilot.csv'
     WTF_CSRF_ENABLED = False
