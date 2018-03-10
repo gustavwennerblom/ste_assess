@@ -6,7 +6,7 @@ from config import DevConfig, PilotConfig, ProdConfig
 
 app = Flask(__name__)
 app.secret_key = get_secret_key(12)
-app.config.from_object(ProdConfig)
+app.config.from_object(PilotConfig)
 
 
 @app.route('/')
