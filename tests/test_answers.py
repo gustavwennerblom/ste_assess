@@ -2,6 +2,7 @@ import unittest
 from main import app
 from config import UnitTestConfig
 
+
 class TestForms(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
@@ -10,7 +11,8 @@ class TestForms(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def generate_base_data(self):
+    @staticmethod
+    def generate_base_data():
         base_data = {}
         for i in range(1, 26):
             base_data['q' + str(i)] = 'Ja'
@@ -42,7 +44,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q2']='Delvis'
+        base_data['q2'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Utgångspunkt för lyckad export', str(response.data.decode('utf-8')))
@@ -52,7 +54,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q3']='Nej'
+        base_data['q3'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Utgångspunkt för lyckad export', str(response.data.decode('utf-8')))
@@ -62,7 +64,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q4']='Nej'
+        base_data['q4'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Utgångspunkt för lyckad export', str(response.data.decode('utf-8')))
@@ -72,7 +74,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q5']='Nej'
+        base_data['q5'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Välja exportmarknad', str(response.data.decode('utf-8')))
@@ -82,7 +84,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q6']='Delvis'
+        base_data['q6'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Välja exportmarknad', str(response.data.decode('utf-8')))
@@ -92,7 +94,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q7']='Delvis'
+        base_data['q7'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Öka hållbarheten', str(response.data.decode('utf-8')))
@@ -102,7 +104,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q8']='Delvis'
+        base_data['q8'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Öka hållbarheten', str(response.data.decode('utf-8')))
@@ -112,7 +114,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q9']='Delvis'
+        base_data['q9'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Segmentera marknaden', str(response.data.decode('utf-8')))
@@ -122,7 +124,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q10']='Nej'
+        base_data['q10'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Segmentera marknaden', str(response.data.decode('utf-8')))
@@ -132,7 +134,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q11']='Nej'
+        base_data['q11'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Formulera säljargument', str(response.data.decode('utf-8')))
@@ -142,7 +144,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q12']='Nej'
+        base_data['q12'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Formulera säljargument', str(response.data.decode('utf-8')))
@@ -152,7 +154,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q13']='Nej'
+        base_data['q13'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Sätta pris', str(response.data.decode('utf-8')))
@@ -162,7 +164,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q14']='Nej'
+        base_data['q14'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Analysera konkurrensen', str(response.data.decode('utf-8')))
@@ -172,7 +174,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q15']='Nej'
+        base_data['q15'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Välja distributionsstrategi', str(response.data.decode('utf-8')))
@@ -182,7 +184,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q16']='Nej'
+        base_data['q16'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Välja distributionsstrategi', str(response.data.decode('utf-8')))
@@ -192,7 +194,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q17']='Delvis'
+        base_data['q17'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Hitta samarbetspartners', str(response.data.decode('utf-8')))
@@ -202,7 +204,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q18']='Delvis'
+        base_data['q18'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Hitta samarbetspartners', str(response.data.decode('utf-8')))
@@ -212,7 +214,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q19']='Delvis'
+        base_data['q19'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Skriva avtal', str(response.data.decode('utf-8')))
@@ -222,7 +224,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q20']='Delvis'
+        base_data['q20'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Skriva avtal', str(response.data.decode('utf-8')))
@@ -232,7 +234,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q21']='Delvis'
+        base_data['q21'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Planera marknadsföring', str(response.data.decode('utf-8')))
@@ -242,7 +244,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q22']='Delvis'
+        base_data['q22'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Göra etableringskalkyl', str(response.data.decode('utf-8')))
@@ -252,7 +254,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q23']='Delvis'
+        base_data['q23'] = 'Delvis'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Göra etableringskalkyl', str(response.data.decode('utf-8')))
@@ -262,7 +264,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q24']='Nej'
+        base_data['q24'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('exportvillkor', str(response.data.decode('utf-8')))
@@ -272,7 +274,7 @@ class TestForms(unittest.TestCase):
         base_data = self.generate_base_data()
 
         # Substitute answers to meet test criteria
-        base_data['q25']='Nej'
+        base_data['q25'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('exportvillkor', str(response.data.decode('utf-8')))
@@ -345,6 +347,7 @@ class TestForms(unittest.TestCase):
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Oops', str(response.data.decode('utf-8')))
+
 
 if __name__ == '__main__':
     unittest.main()

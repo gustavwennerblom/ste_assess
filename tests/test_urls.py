@@ -2,6 +2,7 @@ import unittest
 from main import app
 from config import UnitTestConfig
 
+
 class TestUrls(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
@@ -36,6 +37,7 @@ class TestUrls(unittest.TestCase):
         # self.assertEqual(response.status_code, 200)
         # self.assertIn('Whoops', str(response.data.decode('utf-8')))
 
+
 class TestForms(unittest.TestCase):
     def setUp(self):
         self.client = app.test_client()
@@ -49,11 +51,12 @@ class TestForms(unittest.TestCase):
         Test form can be submitted
         """
         base_data = {}
-        for i in range(1,26):
+        for i in range(1, 26):
             base_data['q' + str(i)] = 'Ja'
 
         response = self.client.post('/assessment', data=base_data)
         self.assertEqual(response.status_code, 200)
+
 
 if __name__ == '__main__':
     unittest.main()

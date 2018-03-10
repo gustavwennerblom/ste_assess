@@ -2,13 +2,12 @@ from flask import Flask, render_template, url_for, redirect
 from forms import MainQuestionnaire
 import csv
 from keygen import get_secret_key
-from flask import request
-from config import DevConfig, TestConfig, ProdConfig
+from config import DevConfig, PilotConfig, ProdConfig
 
 app = Flask(__name__)
 app.secret_key = get_secret_key(12)
 app.config.from_object(ProdConfig)
-x=1
+
 
 @app.route('/')
 def index():
@@ -29,7 +28,7 @@ def assessment():
         for field in form:
             # Process question fields (discarding submit and csrf)
             if field.id.startswith("q"):
-                answers[field.id]=field.data
+                answers[field.id] = field.data
         recommended_modules = recommend_modules(answers)
         feedback = generate_feedback(recommended_modules)
         return render_template('feedback.html', feedback=feedback)
@@ -60,7 +59,7 @@ def recommend_modules(answers):
 
 
 def generate_feedback(recommended_modules):
-    feedback=[]
+    feedback = []
     with open(app.config.get('COURSE_MODULES_FILENAME'), encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for module_info in reader:
