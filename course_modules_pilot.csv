@@ -1,14 +1,15 @@
 module_no,title,url,x-rel,y-rel
-1,Utgångspunkt för lyckad export,http://This_is_pilot blankspace,38,15
-2,Välja exportmarknad,http://thisisnotavailableyet.foo,50,24
-3,Öka hållbarheten,http://thisisnotavailableyet.foo,64,28
-4,Segmentera marknaden,http://thisisnotavailableyet.foo,68,39
-5,Formulera säljargument,http://thisisnotavailableyet.foo,71,48
-6,Sätta pris,http://thisisnotavailableyet.foo,81,54
-7,Analysera konkurrensen,http://thisisnotavailableyet.foo,81,66
-8,Välja distributionsstrategi,http://thisisnotavailableyet.foo,71,71
-9,Hitta samarbetspartners,http://thisisnotavailableyet.foo,66,81
-10,Skriva avtal,http://thisisnotavailableyet.foo,50,85
-11,Planera marknadsföring,http://thisisnotavailableyet.foo,33,85
-12,Göra etableringskalkyl,http://thisisnotavailableyet.foo,24,71
-13,Få koll på exportvillkor,http://thisisnotavailableyet.foo,16,48
+1,Utgångspunkt för lyckad export,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=e91d201e-389f-4863-adc1-cb567b8f3bc7,38,15
+2,Välja exportmarknad,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=323aa5a2-a9f0-4b08-b2f0-c73ec8d1fec1,50,24
+3,Öka hållbarheten,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=43dd0179-4a61-43cf-a0f3-4b078a20e0c7,64,28
+4,Segmentera marknaden,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=e914486a-fe02-432f-8a73-ad0a8a4f115e,68,39
+5,Formulera säljargument,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=4d22bfc5-92f2-496f-be47-7a8211766586,71,48
+6,Sätta pris,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=6b6a767c-277d-4d4a-962e-be1ec476310d,81,54
+7,Analysera konkurrensen,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=e09b09f7-3f96-4ce0-b0c8-22cca1127ac4,81,66
+8,Välja distributionsstrategi,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=504c76da-8d17-499f-9ce9-4ab6350d42fe,71,71
+9,Hitta samarbetspartners,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=53b9d8c0-8c4c-4b37-9193-4b878468039f,66,81
+10,Skriva avtal,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=72e1ba63-f3bf-4f48-a968-64a026d8b19c,50,85
+11,Planera marknadsföring,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=ee36ef72-f66f-49b2-aae1-11db04a304e6,33,85
+12,Göra etableringskalkyl,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=84bbe195-8897-423c-a8a7-4ad20e680a03,24,71
+13,Få koll på exportvillkor,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=534d3df5-b2e9-4ea5-bdb5-0007daebf8b8,16,48
+14,Redo för lyckad export,https://business-sweden-pilot.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=6f3a97ae-3ca1-4b9a-8c8b-aadd3317b3f4,0,0
