@@ -50,7 +50,8 @@ def recommend_modules(answers):
             question_module_map[line.get('Number')] = line['Module']
 
     # Check the answers and identify the suitable modules
-    recommended_modules = []
+    # Always recommend module 14
+    recommended_modules = ['14']
     for question_number in answers:
         if not answers[question_number] == 'Ja':
             recommended_modules.append(question_module_map[question_number])

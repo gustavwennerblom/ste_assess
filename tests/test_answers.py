@@ -21,12 +21,13 @@ class TestForms(unittest.TestCase):
     def test_all_yes(self):
         """
         Test special case occurring if all answers are positive
+        Note - always recommend module #14
         """
         base_data = self.generate_base_data()
 
         response = self.client.post('/assessment', data=base_data)
         self.assertEqual(response.status_code, 200)
-        self.assertIn('Exportmästare!', str(response.data.decode('utf-8')))
+        self.assertIn('Redo för lyckad export', str(response.data.decode('utf-8')))
 
     def test_question_1(self):
         """" Assert module 1 is recommended if bad answer on question 1"""

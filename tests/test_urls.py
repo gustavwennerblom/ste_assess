@@ -25,7 +25,7 @@ class TestUrls(unittest.TestCase):
         """
         response = self.client.get('/assessment')
         self.assertEqual(response.status_code, 200)
-        self.assertIn('Kort instruktionstext här', str(response.data.decode('utf-8')))
+        self.assertIn('Välkommen till Steps to Export!', str(response.data.decode('utf-8')))
 
     def test_error_500(self):
         """
