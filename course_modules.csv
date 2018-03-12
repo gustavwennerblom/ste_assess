@@ -1,15 +1,15 @@
 module_no,title,url,x-rel,y-rel
-1,Utgångspunkt för lyckad export,http://thisisnotavailableyet.foo,38,15
-2,Välja exportmarknad,http://thisisnotavailableyet.foo,50,24
-3,Öka hållbarheten,http://thisisnotavailableyet.foo,64,28
-4,Segmentera marknaden,http://thisisnotavailableyet.foo,68,39
-5,Formulera säljargument,http://thisisnotavailableyet.foo,71,48
-6,Sätta pris,http://thisisnotavailableyet.foo,81,54
-7,Analysera konkurrensen,http://thisisnotavailableyet.foo,81,66
-8,Välja distributionsstrategi,http://thisisnotavailableyet.foo,71,71
-9,Hitta samarbetspartners,http://thisisnotavailableyet.foo,66,81
-10,Skriva avtal,http://thisisnotavailableyet.foo,50,85
-11,Planera marknadsföring,http://thisisnotavailableyet.foo,33,85
-12,Göra etableringskalkyl,http://thisisnotavailableyet.foo,24,71
-13,Få koll på exportvillkor,http://thisisnotavailableyet.foo,16,48
-14,Redo för lyckad export,http://thisisnotavailableyet.foo,34,24
+1,Utgångspunkt för lyckad export,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=9e423869-023d-429b-95b2-f13fd9e321f7,38,15
+2,Välja exportmarknad,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=cee6169f-bbad-41a4-b1fa-ac628315b987,50,24
+3,Öka hållbarheten,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=4c694b25-b8e4-456b-bdb3-301faaa47166,64,28
+4,Segmentera marknaden,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=b1e30291-4c19-4fbe-8dce-4bef991d27e1,68,39
+5,Formulera säljargument,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=8892d023-2b55-48a7-bcd1-5448aad10ea3,71,48
+6,Sätta pris,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=d3eb3132-1064-49ba-b737-cbdf59a6b2df,81,54
+7,Analysera konkurrensen,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=553c01f9-85f2-46e0-8e80-9168a6456e3f,81,66
+8,Välja distributionsstrategi,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=0ad32f05-86ab-4e13-abcd-9355755037b1,71,71
+9,Hitta samarbetspartners,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=8060faf8-848d-425e-908a-37f69db3d898,66,81
+10,Skriva avtal,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=ff993c5f-4b5f-4ecf-9489-995d3dba71bb,50,85
+11,Planera marknadsföring,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=dd6fcc43-d351-45e8-83e1-a754e379961f,33,85
+12,Göra etableringskalkyl,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=92c5cc03-6cca-4a86-b656-190c13e35e47,24,71
+13,Få koll på exportvillkor,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=c8ca516a-d153-4efe-a96f-1704d10f86f6,16,48
+14,Redo för lyckad export,https://business-sweden.csod.com/DeepLink/ProcessRedirect.aspx?module=loRegisterAndLaunch&lo=721bd0ac-daa5-4de0-bd97-f97b1cdd8c06,34,24
