@@ -39,7 +39,6 @@ class TestUI(LiveServerTestCase):
             # input_control.click()
         submit_control = self.driver.find_element_by_id("submit")
         submit_control.click()
-        time.sleep(10)
         input('Press ENTER to close and finalize test sequence')
 
     def tearDown(self):
