@@ -1,6 +1,7 @@
-from flask import Flask, render_template, url_for, redirect
+from flask import Flask, render_template, url_for, redirect, make_response, request, flash
 from forms import MainQuestionnaire
 import csv
+import json
 from keygen import get_secret_key
 from config import DevConfig, PilotConfig, ProdConfig
 
@@ -29,11 +30,39 @@ def assessment():
             # Process question fields (discarding submit and csrf)
             if field.id.startswith("q"):
                 answers[field.id] = field.data
+        answers_json = json.dumps(answers)
+
         recommended_modules = recommend_modules(answers)
         feedback = generate_feedback(recommended_modules)
-        return render_template('feedback.html', feedback=feedback)
+
+        resp = make_response(render_template('feedback.html', feedback=feedback))
+        seconds_valid = 60 * 60 * 24 * 365 * 5  # Five years in seconds
+        resp.set_cookie('last_answer', value=answers_json, max_age=seconds_valid)
+        return resp
+
+    if request.cookies.get('last_answer'):
+        #flash('Du verkar ha svarat tidigare. <a href="{{url_for("reload_feedback")}}">Klicka här </a> för att ladda om rekommendationen</a>')
+        flash(render_template('reload_flash.html'))
 
     return render_template('assessment.html', form=form)
+
+
+@app.route('/check_cookie')
+def check_cookie():
+    last_answer = request.cookies.get('last_answer')
+    return("Last answer was {}".format(last_answer))
+
+
+@app.route('/reload_feedback')
+def reload_feedback():
+    last_answer = json.loads(request.cookies.get('last_answer'))
+    if not last_answer:
+        flash("Failed to load previous answer")
+        return redirect(url_for('assessment'))
+    answers = json.loads(request.cookies.get('last_answer'))
+    recommended_modules = recommend_modules(answers)
+    feedback = generate_feedback(recommended_modules)
+    return render_template('feedback.html', feedback=feedback)
 
 
 def recommend_modules(answers):
