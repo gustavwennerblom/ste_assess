@@ -12,7 +12,6 @@ class PilotConfig(BaseConfig):
 
 class ProdConfig(BaseConfig):
     COURSE_MODULES_FILENAME = 'course_modules.csv'
-    TEST_CONFIG_PARAMETER = "Delete me"
 
 
 class UnitTestConfig(BaseConfig):
