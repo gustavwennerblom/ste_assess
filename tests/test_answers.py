@@ -1,6 +1,6 @@
 import unittest
 from main import app
-from config import UnitTestConfig
+from config import UnitTestConfig, ProdConfig
 
 
 class TestForms(unittest.TestCase):
@@ -348,7 +348,6 @@ class TestForms(unittest.TestCase):
 
         response = self.client.post('/assessment', data=base_data)
         self.assertIn('Oops', str(response.data.decode('utf-8')))
-
 
 if __name__ == '__main__':
     unittest.main()

@@ -26,7 +26,7 @@ class TestUI(LiveServerTestCase):
 
     def test_submit_assessment(self):
         """
-        Set up for 10 seconds visual inspection of result page from a random survey submission
+        Set up for visual inspection of result page from a random survey submission
         :return: Nothing
         """
         self.driver.get(self.get_server_url())
@@ -39,8 +39,19 @@ class TestUI(LiveServerTestCase):
             # input_control.click()
         submit_control = self.driver.find_element_by_id("submit")
         submit_control.click()
-        time.sleep(10)
-        input('Press ENTER to close and finalize test sequence')
+        input('Press ENTER after visual inspection')
+        self.driver.get(self.get_server_url())
+        flashed_message = self.driver.find_element_by_class_name("flashes")
+        self.assertIn('svarat tidigare', flashed_message.text)
+        input("Press ENTER to finalize test sequence")
+
+    def __test_z_cookie_is_set(self):
+        # NOT YET WORKING
+        from werkzeug.http import parse_cookie
+        # response = self.client.get('/', follow_redirects=True)
+        self.driver.get(self.get_server_url())
+        flashed_message = self.driver.find_element_by_class_name("flashes")
+        self.assertIn('svarat tidigare', flashed_message.text)
 
     def tearDown(self):
         self.driver.quit()
