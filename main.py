@@ -36,7 +36,7 @@ def assessment():
         feedback = generate_feedback(recommended_modules)
 
         resp = make_response(render_template('feedback.html', feedback=feedback))
-        seconds_valid = 60 * 60 * 24 * 365 * 5  # Five years in seconds
+        seconds_valid = 60 * 60 * 24 * 365  # One year in seconds
         resp.set_cookie('last_answer', value=answers_json, max_age=seconds_valid)
         return resp
 
