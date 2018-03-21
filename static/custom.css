@@ -50,6 +50,10 @@ form > ul > li {
     font-size: 1.5rem;
     }
 
+.tech-info {
+    font-size: 1.2rem;
+    font-style: italic;
+}
 .bus-blue-light {
     background: #36a9e1;
 }
