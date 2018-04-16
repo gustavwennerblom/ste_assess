@@ -268,7 +268,7 @@ class TestForms(unittest.TestCase):
         base_data['q24'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
-        self.assertIn('exportvillkor', str(response.data.decode('utf-8')))
+        self.assertIn('exportregler', str(response.data.decode('utf-8')))
 
     def test_question_25(self):
         """" Assert module 13 is recommended if bad answer on question 25"""
@@ -278,7 +278,7 @@ class TestForms(unittest.TestCase):
         base_data['q25'] = 'Nej'
 
         response = self.client.post('/assessment', data=base_data)
-        self.assertIn('exportvillkor', str(response.data.decode('utf-8')))
+        self.assertIn('exportregler', str(response.data.decode('utf-8')))
 
     def test_recommend_module_2(self):
         """" Assert module 2 is recommended if bad answer on question 5 or 6"""
